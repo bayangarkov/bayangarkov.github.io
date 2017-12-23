@@ -35,24 +35,3 @@ window.onclick = function(event) {
         modal3.style.display = "block";
     }
 }
-
-$(document).ready(function() {
-    $("body").on("click", ".right.carousel-control,.left.carousel-control,.carousel-indicators li,.myCarousel-target", function() {
-
-
-        var myParent = $('carouselExampleIndicators');
-        var target = myParent.find('.item.active');
-
-        myParent.css({
-                'overflow': 'hidden',
-                'height': '100vh'
-            }).delay(500)
-            .queue(function(next) {
-                next();
-                myParent.css({
-                    'overflow': 'auto',
-                    'height': 'auto'
-                });
-            })
-    });
-});
